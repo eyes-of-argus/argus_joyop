@@ -1,0 +1,15 @@
+<launch>
+    <group ns="joyop">
+        <!-- joy node -->
+        <node respawn="true" pkg="joy" type="joy_node" name="joy">
+            <remap from="joy" to="/joyop/raw" />
+            <param name="dev" type="string" value="/dev/input/js0" />
+            <param name="deadzone" value="0.10" />
+        </node>
+
+        <!-- velocity publisher node -->
+        <node pkg="joyop" name="joy_cmd" type="joyop_differential.py" output="screen">
+            <remap from="cmd_vel" to="/keyop_vel_smoother/raw_cmd_vel"/>
+        </node>
+    </group>
+</launch>
