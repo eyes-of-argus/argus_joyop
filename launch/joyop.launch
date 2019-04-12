@@ -8,7 +8,7 @@
         </node>
 
         <!-- velocity publisher node -->
-        <node pkg="joyop" name="joy_cmd" type="joyop_differential.py" output="screen">
+        <node pkg="argus_joyop" name="joy_cmd" type="joyop_differential.py" output="screen">
             <remap from="cmd_vel" to="/keyop_vel_smoother/raw_cmd_vel"/>
         </node>
     </group>
