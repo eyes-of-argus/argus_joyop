@@ -1,0 +1,19 @@
+# catkin
+catkin/
+catkin_generated/
+
+# cmake
+CMakeFiles/
+CMakeCache.txt
+CTestTestfile.cmake
+Makefile
+cmake_install.cmake
+
+# build
+devel/
+
+# test
+gtest/
+
+# VS Code
+.vscode/
