@@ -1,5 +1,7 @@
 <launch>
     <group ns="joyop">
+        <!-- dualshock 4 connection manager -->
+        <node pkg="argus_joyop" type="ds4drv.sh" name="argus_ds4drv" />
         <!-- joy node -->
         <node respawn="true" pkg="joy" type="joy_node" name="joy">
             <remap from="joy" to="/joyop/raw" />
