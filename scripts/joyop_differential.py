@@ -15,10 +15,10 @@ from geometry_msgs.msg import Twist
 
 
 def callback(data):
-    vel_publisher = rospy.Publisher('/joyop/cmd_vel', Twist, queue_size=1)
+    vel_publisher = rospy.Publisher('/joyop/cmd_vel', Twist, queue_size=5)
     cmd = Twist()
 
-    deadzone = 0.15  # percentage, increased deadzone decreases joystick sensitivity
+    deadzone = 0.10  # percentage, increased deadzone decreases joystick sensitivity
     max_linear_vel = 4.0
     max_angular_vel = 4.0
 
